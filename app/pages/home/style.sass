@@ -1,0 +1,46 @@
+.chapter
+  margin : 1rem 1rem
+  .chapter__heading
+    &__title
+      font-size   : 24px
+      font-weight : 700
+    &__stats
+      margin : 8px 0
+
+.chapter__class
+  .class__lesson
+    position : relative
+    display  : flex
+    gap      : 8px
+    .lesson__icon
+      position      : relative
+      width         : 4rem
+      height        : 4rem
+      background    : whitesmoke
+      border        : 4px gray solid
+      border-radius : 100%
+    .lesson__title
+      display     : flex
+      align-items : center
+    &--completed
+      .lesson__icon
+        border : 4px green solid
+        &::after
+          content       : ""
+          width         : 16px
+          height        : 16px
+          left          : 50%
+          translate     : -50%
+          background    : green
+          border-radius : 100%
+          position      : absolute
+          bottom        : calc(0em - 8px)
+    &:not(:last-child)::after
+      content      : ""
+      position     : absolute
+      left         : 1.8rem
+      height       : 1.5rem
+      bottom       : calc(0em - 1.8rem)
+      border-left  : 4px
+      border-color : gray
+      border-style : dotted
